@@ -1,0 +1,60 @@
+{% load static %}    
+<style>
+    table {
+        border-collapse: collapse;
+        width: 30%;
+    }
+    
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid black;
+    }
+    </style>
+        
+
+
+
+<h1>阿呆和阿瓜</h1>
+
+<table>
+    <thead>
+        <tr>
+        <th>name</th>
+        <th>age</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in data1 %}
+        <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.age }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Weight</th>
+    </tr>
+    {% for item in data2 %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.age }}</td>
+        <td>{{ item.weight }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<br>
+<img src="{% static 'img/agua.jpg' %}" alt="Image" style=width:200px; height: auto >
+<audio controls style=width:200px; height: auto >
+    <source src="{% static 'audio/aaa.mp3' %}" type=audio/mpeg>n</audio>
+
+
+<video controls style=width:200px; height: auto;>
+    <source src="{% static 'video/adaiadai.mp4' %}" type=video/mp4>n</video>
