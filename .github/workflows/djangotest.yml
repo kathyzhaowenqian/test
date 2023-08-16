@@ -32,7 +32,9 @@ jobs:
 
 
     - name: testDjango
+      env:
+        MY_NICKNAME1: ${{ secrets.MY_NAME }}
       run: |
         pip list
-        echo $MY_NICKNAME
+        echo $MY_NICKNAME1
     
